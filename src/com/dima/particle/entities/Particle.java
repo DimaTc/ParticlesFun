@@ -105,6 +105,9 @@ public class Particle {
 		case CYAN:
 			g.setColor(Color.cyan);
 			break;
+			default:
+				g.setColor(Color.white);
+				break;
 		}
 		g.fillOval(startPosition.x, startPosition.y, size, size);
 	}

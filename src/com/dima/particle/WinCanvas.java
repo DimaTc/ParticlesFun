@@ -37,6 +37,7 @@ public class WinCanvas extends Canvas implements Runnable{
 		mh = new MouseHandler();
 		
 		addMouseMotionListener(mh);
+		addMouseListener(mh);
 		
 	}
 	
@@ -87,7 +88,9 @@ public class WinCanvas extends Canvas implements Runnable{
 	
 	public void update(){
 		if(mh.isClicked()){
-			particles.add(new Particle(mh.getPoint()));
+			particles.add(new Particle(mh.getPoint().x, mh.getY()));
+			particles.add(new Particle(mh.getPoint().x, mh.getY()));
+			particles.add(new Particle(mh.getPoint().x, mh.getY()));
 		}
 		for(Particle p : particles){
 			if(p.isOutOfBounds()){
@@ -109,7 +112,6 @@ public class WinCanvas extends Canvas implements Runnable{
 		//
 		g.setColor(Color.black);
 		g.fillRect(0, 0, dim.width, dim.height);
-		g.setColor(Color.green);
 		
 		for(Particle p : particles){
 			if(p.isOutOfBounds()){
