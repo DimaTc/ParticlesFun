@@ -22,6 +22,8 @@ public class Particle {
 	private static final int BLUE 	 	= 1;
 	private static final int GREEN  	= 2;
 	private static final int YELLOW 	= 3;
+	private static final int ORANGE 	= 4;
+	private static final int CYAN	 	= 5;
 	
 	public Particle(Point startPosition){
 		this.startPosition = startPosition;
@@ -59,7 +61,7 @@ public class Particle {
 	}
 		
 	public void setRandomColor(){
-		color = rand.nextInt(4);
+		color = rand.nextInt(6);
 	}
 	
 	public boolean isOutOfBounds(){
@@ -96,6 +98,12 @@ public class Particle {
 			break;
 		case YELLOW:
 			g.setColor(Color.yellow);
+			break;
+		case ORANGE:
+			g.setColor(Color.orange);
+			break;
+		case CYAN:
+			g.setColor(Color.cyan);
 			break;
 		}
 		g.fillOval(startPosition.x, startPosition.y, size, size);
