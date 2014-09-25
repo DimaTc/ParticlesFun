@@ -13,8 +13,8 @@ import com.dima.particle.handlers.MouseHandler;
 public class WinCanvas extends Canvas implements Runnable{
 	private static final long serialVersionUID = 1L;
 
-	public static final int WIDTH = 480;
-	public static final int HEIGHT= 360;
+	public static final int WIDTH = 320;
+	public static final int HEIGHT= 240;
 	public static final int SCALE = 2;
 	
 	public static final Dimension dim = new Dimension(WIDTH * SCALE , HEIGHT * SCALE);
